@@ -1,0 +1,23 @@
+.splat {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+}
+
+.splat__layer {
+  position: absolute;
+  width: auto;
+  height: auto;
+}
+
+.splat__number {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  color: #fff;
+}

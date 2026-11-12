@@ -1,0 +1,197 @@
+:root {
+  --primary-50: #d6ddd6;
+  --primary-75: #bbc6bb;
+  --primary-300: #547056;
+  --primary-400: #325334;
+  --primary-500: #2a452b;
+  --secondary-400: #e16118;
+
+  --text-50: #fcfcfd;
+  --text-75: #f8fafc;
+  --text-200: #e3e8ef;
+  --text-500: #697586;
+  --text-600: #4b5565;
+  --text-700: #364152;
+  --text-900: #121926;
+
+  --cream-overlay: rgba(237, 237, 208, 0.75);
+  --chip-bg: #e3e6d8;
+
+  --page-width: 1440px;
+  --page-gutter: 100px;
+  --nav-height: 108.414px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  color: var(--text-900);
+  background: #ededd0;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: none;
+}
+
+.page {
+  width: 100%;
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding-top: var(--nav-height);
+  overflow-x: clip;
+}
+
+/* Between the mobile breakpoint and the 1440px design width, scale the desktop layout down as a whole. */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .page {
+    width: 1440px;
+    max-width: none;
+    zoom: var(--page-zoom, 1);
+  }
+}
+
+/* Grid-paper background used behind every cream section. */
+.paper {
+  position: relative;
+  isolation: isolate;
+}
+
+.paper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: url("/assets/grid.png") center / cover;
+}
+
+.paper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--cream-overlay);
+}
+
+/* Torn green badge exported from Figma; the PNG bleeds 8px past a 200x48 box on each side. */
+.rough {
+  position: relative;
+  isolation: isolate;
+}
+
+.rough::before {
+  content: "";
+  position: absolute;
+  inset: -16.67% -4%;
+  z-index: -1;
+  background: url("/assets/torn-badge.png") center / 100% 100% no-repeat;
+}
+
+.home__middle {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.section-head {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.h1 {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 84px;
+}
+
+.h2 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 64px;
+  color: var(--text-900);
+}
+
+.lead {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--text-600);
+}
+
+.body {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--text-600);
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --page-gutter: 20px;
+    --nav-height: 80px;
+  }
+
+  .page {
+    max-width: 720px;
+  }
+
+  .home__middle {
+    gap: 0;
+  }
+
+  .h1 {
+    font-size: 36px;
+    line-height: 50px;
+  }
+
+  .h2 {
+    font-size: 30px;
+    line-height: 42px;
+  }
+
+  .lead {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .body {
+    font-size: 15px;
+    line-height: 25px;
+  }
+}

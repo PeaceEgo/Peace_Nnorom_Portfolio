@@ -1,0 +1,165 @@
+.skills__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 1240px;
+}
+
+.skills__title {
+  color: #fff;
+}
+
+.skills__lead {
+  width: 606px;
+  color: var(--text-75);
+}
+
+.skills__grid {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.skill-card {
+  flex: 1 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px 20px;
+  border: 1px solid var(--primary-300);
+  border-radius: 16px;
+}
+
+.skill-card__badge {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: var(--text-900);
+}
+
+.skill-card__badge span {
+  position: relative;
+}
+
+.skill-card__badge .is-light {
+  color: #fff;
+}
+
+.skill-card__star {
+  position: absolute;
+  left: calc(-8px + 76px * 0.1344);
+  top: calc(-8px + 76px * 0.1271);
+  width: calc(76px * (1 - 0.2688));
+  height: calc(76px * (1 - 0.2542));
+}
+
+.skill-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.skill-card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skill-card__text .body {
+  color: var(--text-75);
+}
+
+.skill-card__title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: #fff;
+}
+
+.skill-card__chips {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.skill-card__row {
+  display: flex;
+  gap: 16px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 50px;
+  padding: 16px 24px;
+  border: 1px solid var(--primary-75);
+  border-radius: 40px;
+  background: var(--chip-bg);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--text-700);
+  white-space: nowrap;
+}
+
+.chip__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+}
+
+@media (max-width: 1023px) {
+  .skills.torn-band {
+    padding: 100px 0;
+  }
+
+  .skills__inner {
+    width: auto;
+    gap: 32px;
+  }
+
+  .skills__lead {
+    width: auto;
+  }
+
+  .skills__grid {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+  }
+
+  .skill-card {
+    flex: none;
+    padding: 24px 20px 32px;
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .skill-card__body {
+    gap: 24px;
+  }
+
+  .skill-card__chips,
+  .skill-card__row {
+    gap: 12px;
+  }
+
+  .skill-card__row {
+    flex-wrap: wrap;
+  }
+
+  .chip {
+    height: 44px;
+    padding: 12px 18px;
+    font-size: 15px;
+  }
+}

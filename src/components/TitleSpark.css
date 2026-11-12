@@ -1,0 +1,35 @@
+.title-spark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28.362px;
+  height: 29.207px;
+  flex-shrink: 0;
+}
+
+.title-spark__inner {
+  position: relative;
+  width: 23.221px;
+  height: 24.374px;
+  rotate: 13.79deg;
+}
+
+.title-spark__bar {
+  position: absolute;
+  width: 2.498px;
+  height: 11.421px;
+  border-radius: 3569px;
+  background: var(--secondary-400);
+}
+
+.title-spark__slot {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-spark__bar--rot {
+  position: relative;
+  flex: none;
+}

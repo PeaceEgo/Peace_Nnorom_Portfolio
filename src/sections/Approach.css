@@ -1,0 +1,152 @@
+.approach {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 46px;
+  padding: 60px var(--page-gutter);
+}
+
+.approach__head {
+  width: 100%;
+}
+
+.approach__lead {
+  width: 778px;
+}
+
+.approach__steps {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 89px;
+}
+
+.step__card {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  width: calc(793px + 64px);
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
+}
+
+.step__card::before,
+.step__card::after {
+  border-radius: inherit;
+}
+
+.step__icon {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.step__icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  padding: 16px;
+  border: 0.5px solid var(--primary-75);
+  border-radius: 160px;
+  background: var(--chip-bg);
+  overflow: hidden;
+}
+
+.step__text {
+  flex: 1 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.step__title {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  color: var(--text-900);
+  white-space: nowrap;
+}
+
+.approach__deco {
+  position: absolute;
+  left: 1180px;
+}
+
+.approach__deco--asterisk {
+  top: -47px;
+}
+
+.approach__deco--spark {
+  bottom: -40px;
+}
+
+@media (max-width: 1023px) {
+  .approach {
+    align-items: stretch;
+    gap: 32px;
+    padding: 48px var(--page-gutter);
+  }
+
+  .approach__lead {
+    width: auto;
+  }
+
+  .approach__steps {
+    gap: 24px;
+  }
+
+  .step {
+    position: relative;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .step .splat {
+    position: absolute;
+    right: -18px;
+    top: -30px;
+    z-index: 1;
+    transform: scale(0.64);
+  }
+
+  .step__card {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 24px 20px;
+    border-radius: 16px;
+  }
+
+  .step__icon {
+    padding: 0;
+  }
+
+  .step__icon-circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+  }
+
+  .step__title {
+    font-size: 20px;
+    line-height: 30px;
+    white-space: normal;
+  }
+
+  .approach__deco {
+    display: none;
+  }
+}

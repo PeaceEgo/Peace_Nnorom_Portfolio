@@ -1,0 +1,195 @@
+.project {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 32px;
+  border: 1px solid var(--primary-50);
+  border-radius: 16px;
+  box-shadow: 0 0 100px rgba(42, 69, 43, 0.25);
+  overflow: hidden;
+}
+
+.project::before,
+.project::after {
+  content: "";
+  position: absolute;
+}
+
+.project::before {
+  z-index: -2;
+  left: -51.91%;
+  top: -26.7%;
+  width: 203.75%;
+  height: 153.23%;
+  background: url("/assets/card-texture.png") center / 100% 100%;
+  transform: rotate(180deg);
+}
+
+.project::after {
+  z-index: -1;
+  inset: 0;
+  border-radius: inherit;
+  background: rgba(233, 233, 199, 0.6);
+}
+
+.project__device {
+  position: relative;
+  width: 560px;
+  max-width: 100%;
+  aspect-ratio: 560 / 331.31;
+  flex-shrink: 0;
+}
+
+.project__laptop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.project__screen {
+  position: absolute;
+  left: 9.41%;
+  top: 3.21%;
+  width: 82.19%;
+  height: 86.83%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.project__content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+.project__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.project__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project__name-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.project__name {
+  padding: 8px 0;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 56px;
+  color: var(--text-900);
+  white-space: nowrap;
+}
+
+.project__type {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--text-900);
+}
+
+.project__scribble {
+  position: relative;
+  width: 140px;
+  height: 10.628px;
+  flex-shrink: 0;
+  transform: scaleX(-1);
+}
+
+.project__scribble img {
+  position: absolute;
+  left: 0.23%;
+  top: -2.824px;
+}
+
+.project__role {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-weight: 600;
+}
+
+.project__role-label {
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--text-700);
+}
+
+.project__role-value {
+  font-size: 24px;
+  line-height: 36px;
+  color: var(--text-900);
+}
+
+.project__actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+@media (max-width: 1023px) {
+  .project {
+    gap: 32px;
+    padding: 24px 16px;
+    box-shadow: 0 0 40px rgba(42, 69, 43, 0.18);
+  }
+
+  .project__content,
+  .project__intro {
+    gap: 20px;
+  }
+
+  .project__heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .project__name {
+    padding: 0;
+    font-size: 28px;
+    line-height: 40px;
+    white-space: normal;
+  }
+
+  .project__type {
+    gap: 16px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .project__scribble {
+    width: 140px;
+  }
+
+  .project__role {
+    gap: 4px;
+  }
+
+  .project__role-value {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .project__actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+}

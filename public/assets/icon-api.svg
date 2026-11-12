@@ -1,0 +1,15 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="gcp:api" clip-path="url(#clip0_0_102)">
+<g id="Vector">
+</g>
+<g id="Group">
+<path id="Vector_2" d="M3 6.1C1.9 6.1 0.7 7.2 0.7 8.3V18H3V13.5H5.2V18H7.4V8.3C7.4 7.2 6.3 6.1 5.1 6.1H3ZM3 11.2V8.2H5.2V11.2H3ZM11.3 6C10.1 6 9 7.1 9 8.2V18H11.2V13.5H13.4C14.5 13.5 15.7 12.4 15.7 11.3V8.3C15.7 7.2 14.6 6.1 13.4 6.1H11.3V6ZM11.2 11.2V8.2H13.4V11.2H11.2ZM19.5 8.3V15.8H17.2V18H24V15.8H21.8V8.3H24V6.1H17.2V8.3H19.5Z" fill-rule="evenodd" clip-rule="evenodd" fill="#5C85DE"/>
+<path id="Vector_3" d="M3 13.5V11.2H4.5L3 13.5ZM11.2 13.5V11.2H12.5L11.2 13.5ZM19.5 9.8V8.3H21.8L19.5 9.8Z" fill-rule="evenodd" clip-rule="evenodd" fill="#3367D6"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_102">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>

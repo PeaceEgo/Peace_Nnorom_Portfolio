@@ -1,0 +1,64 @@
+.portrait {
+  position: relative;
+  width: 424px;
+  height: 549px;
+  flex-shrink: 0;
+}
+
+.portrait__frame {
+  position: absolute;
+  left: 50%;
+  top: 47.76px;
+  transform: translateX(-50%);
+  padding: 16px 12px 28px;
+  border-radius: 16px;
+  background: var(--primary-500);
+  overflow: hidden;
+}
+
+.portrait__photo {
+  width: 400px;
+  height: 450px;
+  border-radius: 12px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.portrait__flower {
+  position: absolute;
+  left: 155.9px;
+  top: 0;
+  width: 112.342px;
+  height: 112.342px;
+}
+
+@media (max-width: 1023px) {
+  .portrait {
+    width: 100%;
+    max-width: 424px;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 40px;
+  }
+
+  .portrait__frame {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    padding: 12px 10px 24px;
+  }
+
+  .portrait__photo {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 400 / 450;
+  }
+
+  .portrait__flower {
+    left: 50%;
+    width: 84px;
+    height: 84px;
+    transform: translateX(-50%);
+  }
+}
