@@ -18,17 +18,22 @@ const groups: SkillGroup[] = [
     number: 1,
     star: "/assets/star-1.svg",
     title: "Front-end",
-    description: "Building responsive, intuitive, and engaging user interfaces for seamless digital experiences.",
+    description:
+      "Building responsive web and mobile interfaces — intuitive, engaging experiences across browsers and devices.",
     rows: [
       [
         { name: "React", icon: "/assets/icon-react.svg", w: 24, h: 22 },
-        { name: "Tailwind CSS", icon: "/assets/icon-tailwind.svg", w: 24, h: 14.727 },
+        { name: "React Native", icon: "/assets/icon-react.svg", w: 24, h: 22 },
       ],
       [
+        { name: "Expo", icon: "/assets/icon-expo.svg", w: 24, h: 24 },
         { name: "Next.js", icon: "/assets/icon-next.svg", w: 24, h: 24, mask: "/assets/icon-next-mask.svg" },
+      ],
+      [
+        { name: "TypeScript", icon: "/assets/icon-ts.svg", w: 24, h: 24 },
         { name: "JavaScript", icon: "/assets/icon-js.svg", w: 24, h: 24 },
       ],
-      [{ name: "TypeScript", icon: "/assets/icon-ts.svg", w: 24, h: 24 }],
+      [{ name: "Tailwind CSS", icon: "/assets/icon-tailwind.svg", w: 24, h: 14.727 }],
     ],
   },
   {
@@ -53,15 +58,24 @@ const groups: SkillGroup[] = [
     number: 3,
     star: "/assets/star-3.svg",
     title: "Integration & Data",
-    description: "Connecting APIs, databases, and third-party services to enable seamless data flow across applications.",
+    description:
+      "Connecting APIs, databases, messaging, and deployment pipelines so applications move data reliably and ship consistently.",
     rows: [
       [
-        { name: "REST APIs", icon: "/assets/icon-api.svg", w: 24, h: 24 },
-        { name: "Databases", icon: "/assets/icon-db.svg", w: 16.5, h: 21 },
+        { name: "PostgreSQL", icon: "/assets/icon-postgres.svg", w: 24, h: 24 },
+        { name: "MySQL", icon: "/assets/icon-mysql.svg", w: 24, h: 24 },
       ],
       [
+        { name: "MongoDB", icon: "/assets/icon-mongo.svg", w: 24, h: 24 },
+        { name: "Kafka", icon: "/assets/icon-kafka.svg", w: 24, h: 24 },
+      ],
+      [
+        { name: "Docker", icon: "/assets/icon-docker.svg", w: 24, h: 24 },
+        { name: "CI/CD", icon: "/assets/icon-cicd.svg", w: 24, h: 24 },
+      ],
+      [
+        { name: "REST APIs", icon: "/assets/icon-api.svg", w: 24, h: 24 },
         { name: "Git", icon: "/assets/icon-git.svg", w: 24, h: 23.408 },
-        { name: "cPanel", icon: "/assets/icon-cpanel.svg", w: 28, h: 17 },
       ],
       [{ name: "Wordpress", icon: "/assets/icon-wp.svg", w: 24, h: 24 }],
     ],

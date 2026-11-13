@@ -20,6 +20,16 @@
   gap: 16px;
 }
 
+.hero__intro {
+  margin: 0;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--primary-300);
+}
+
 .hero__title {
   font-weight: 700;
   font-size: 48px;

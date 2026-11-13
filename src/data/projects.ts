@@ -5,7 +5,8 @@ export type Project = {
   description: string;
   role: string;
   screenshot: string;
-  liveUrl: string;
+  /** Omit or leave empty when the project is not live yet. */
+  liveUrl?: string;
   caseStudy: {
     tagline?: string;
     /** Pre-composed gallery image; otherwise the screenshot is split into three panels. */
@@ -28,7 +29,7 @@ export const projects: Project[] = [
       "Get A Pro is a service marketplace designed to connect customers with skilled artisans and service professionals. The platform provides a structured way for customers to discover service providers, request jobs, and manage service-related transactions.",
     role: "Front-end",
     screenshot: "/assets/shot-getapro.jpg",
-    liveUrl: "#",
+    liveUrl: "https://getaprong.com/",
     caseStudy: {
       tagline: "Getting Jobs made Easier",
       gallery: "/assets/case-getapro.png",
@@ -51,8 +52,8 @@ export const projects: Project[] = [
       "My Store is a multi-vendor e-commerce marketplace that brings independent merchants and service providers together on one platform, allowing them to create and manage their own digital storefronts and reach customers",
     role: "Front-end",
     screenshot: "/assets/shot-mystore.jpg",
-    liveUrl: "#",
     caseStudy: {
+      gallery: "/assets/case-mystore.png",
       year: 2026,
       platforms: ["Web", "Web App"],
       stack: ["React", "TypeScript"],
@@ -70,6 +71,7 @@ export const projects: Project[] = [
     screenshot: "/assets/shot-flo.jpg",
     liveUrl: "https://flofinanceng.com/",
     caseStudy: {
+      gallery: "/assets/case-flo.png",
       year: 2026,
       platforms: ["Web", "Web App"],
       stack: ["Next.js", "TypeScript", "Tailwind CSS"],
@@ -89,6 +91,7 @@ export const projects: Project[] = [
     screenshot: "/assets/shot-dpcms.jpg",
     liveUrl: "https://www.destinypromoterscooperative.com/",
     caseStudy: {
+      gallery: "/assets/case-dpcms.png",
       year: 2026,
       platforms: ["Website"],
       stack: ["Next.js", "React", "TypeScript"],
@@ -106,8 +109,8 @@ export const projects: Project[] = [
       "Lilian Thread is a native-wear fashion brand focused on creating stylish and well-crafted traditional outfits. It allows customers to explore collections, browse products, make purchases, save favourites, and request custom-made outfits based on their preferences.",
     role: "Front-end",
     screenshot: "/assets/shot-liana.jpg",
-    liveUrl: "#",
     caseStudy: {
+      gallery: "/assets/case-liana.png",
       year: 2026,
       platforms: ["Web", "Web App"],
       stack: ["React", "TypeScript"],
@@ -123,8 +126,8 @@ export const projects: Project[] = [
       "Luxora is a real estate platform developed to help individuals and businesses navigate property ownership, investment, development, leasing, and management through accessible digital solutions.",
     role: "Front-end",
     screenshot: "/assets/shot-luxora.jpg",
-    liveUrl: "#",
     caseStudy: {
+      gallery: "/assets/case-luxora.png",
       year: 2026,
       platforms: ["Website"],
       stack: ["React", "TypeScript"],
@@ -142,6 +145,7 @@ export const projects: Project[] = [
     screenshot: "/assets/shot-noblemerry.jpg",
     liveUrl: "https://noblemerrycompany.com/",
     caseStudy: {
+      gallery: "/assets/case-noblemerry.png",
       year: 2026,
       platforms: ["Web", "Web App"],
       stack: ["React", "TypeScript"],
@@ -159,6 +163,7 @@ export const projects: Project[] = [
     screenshot: "/assets/shot-fortune.jpg",
     liveUrl: "https://fortuneinitiativeng.com/",
     caseStudy: {
+      gallery: "/assets/case-fortune.png",
       year: 2026,
       platforms: ["Web", "Web App"],
       stack: ["React", "TypeScript"],

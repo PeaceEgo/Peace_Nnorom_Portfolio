@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Button from "./Button";
-import { mailto } from "../data/contact";
+import { whatsappUrl } from "../data/contact";
 import "./Nav.css";
 
 export const navLinks = [
@@ -57,7 +57,7 @@ export default function Nav() {
         {links}
       </nav>
 
-      <Button className="nav__cta" href={mailto}>
+      <Button className="nav__cta" href={whatsappUrl}>
         Let’s Talk
       </Button>
 
@@ -84,7 +84,7 @@ export default function Nav() {
         <nav className="menu__links" aria-label="Mobile">
           {links}
         </nav>
-        <Button href={mailto}>Let’s Talk</Button>
+        <Button href={whatsappUrl}>Let’s Talk</Button>
       </div>
       {open && <div className="menu__backdrop" onClick={() => setOpen(false)} aria-hidden />}
     </header>

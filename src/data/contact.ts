@@ -1,6 +1,9 @@
 export const email = "nnorompeace14@gmail.com";
 export const mailto = `mailto:${email}`;
 
+/** Header CTA — opens WhatsApp chat. */
+export const whatsappUrl = "https://wa.me/2349131399569";
+
 export const linkedinUrl = "https://www.linkedin.com/in/peacennorom/";
 
 /** Rendered on the star badge; LinkedIn has its own full badge artwork. */

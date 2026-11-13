@@ -74,7 +74,11 @@ export default function CaseStudy() {
         <div className="case__meta-group">
           <dt>See live project :</dt>
           <dd>
-            <Button href={project.liveUrl}>View Live Project</Button>
+            {project.liveUrl ? (
+              <Button href={project.liveUrl}>View Live Project</Button>
+            ) : (
+              <span className="case__not-live">Not live yet</span>
+            )}
           </dd>
         </div>
       </dl>

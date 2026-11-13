@@ -1,48 +1,54 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type CSSProperties } from "react";
 import "./Testimonials.css";
 
 const testimonials = [
   {
     color: "#2b57d6",
+    initials: "RS",
     quote:
-      "Peace is a thoughtful developer who brings ideas to life with great attention to detail. She delivers quality work that makes her a valuable team member.",
-    name: "Ogenetega Michael",
-    company: "@ Selimate",
+      "Peace is one of the most dependable engineers I've worked with at Meezak. She takes ownership of features end to end, communicates clearly, and consistently ships clean, production-ready work.",
+    name: "Rukayat Sodiq",
+    company: "Meezak Technologies",
   },
   {
     color: "#ff4d8d",
+    initials: "BI",
     quote:
-      "Working with Peace is seamless. She communicates clearly, anticipates edge cases early, and ships features that feel polished from the first release.",
-    name: "Chiamaka Okoro",
-    company: "@ Meezak",
+      "As a learner and later as an instructor at Babtech, Peace showed real depth. She understands both the craft of building software and how to explain it in a way that helps others grow.",
+    name: "Babatunde Olayemi Idris",
+    company: "Founder, Babtech",
   },
   {
     color: "#141b34",
+    initials: "PE",
     quote:
-      "Peace turns complex requirements into clean, maintainable interfaces. Her frontend work consistently improves both usability and delivery speed.",
-    name: "David Mensah",
-    company: "@ Init Zero",
+      "Peace helped bring Travel Inn's booking experience to life with careful attention to usability and performance. She is thoughtful, responsive, and easy to collaborate with across product decisions.",
+    name: "Princess Enearu",
+    company: "Founder, Travel Inn",
   },
   {
     color: "#e16118",
+    initials: "KI",
     quote:
-      "She brings a calm, structured approach to every project. Peace is reliable under pressure and always focused on what will serve the end user best.",
-    name: "Amina Yusuf",
-    company: "@ Travel Inn",
+      "Working with Peace as a product engineer is smooth. She asks the right questions early, handles edge cases well, and delivers interfaces that feel intentional rather than rushed.",
+    name: "Kelechukwu Ikechukwu",
+    company: "Product Engineer",
   },
   {
     color: "#325334",
+    initials: "DO",
     quote:
-      "Peace bridges design and engineering beautifully. She asks the right questions, implements carefully, and leaves the codebase better than she found it.",
-    name: "Tunde Adebayo",
-    company: "@ Flo Finance",
+      "Peace writes code that other engineers can trust. Her implementations are structured, readable, and built with maintainability in mind - exactly what you want on a serious product team.",
+    name: "David Olaleye",
+    company: "Software Engineer",
   },
   {
     color: "#547056",
+    initials: "EU",
     quote:
-      "I trust Peace with production work. She owns her features end to end, follows through on feedback, and delivers results the team can depend on.",
-    name: "Ngozi Eze",
-    company: "@ Destiny Promoters",
+      "From a product perspective, Peace is a pleasure to work with. She translates requirements into practical solutions quickly, flags risks early, and stays focused on the user experience.",
+    name: "Esther Ukanwa",
+    company: "Product Manager",
   },
 ];
 
@@ -82,10 +88,14 @@ export default function Testimonials() {
                   <p className="body">{t.quote}</p>
                 </blockquote>
                 <figcaption className="quote__author">
-                  <img className="quote__avatar" src="/assets/avatar.png" alt="" />
-                  <span className="quote__name">{t.name}</span>
-                  <span className="quote__divider" aria-hidden />
-                  <span className="quote__company">{t.company}</span>
+                  <span className="quote__avatar" aria-hidden style={{ "--avatar-delay": `${i * 0.35}s` } as CSSProperties}>
+                    <span className="quote__avatar-ring" />
+                    <span className="quote__avatar-initials">{t.initials}</span>
+                  </span>
+                  <span className="quote__meta">
+                    <span className="quote__name">{t.name}</span>
+                    <span className="quote__company">{t.company}</span>
+                  </span>
                 </figcaption>
               </div>
               <span className="quote__squiggle" aria-hidden>

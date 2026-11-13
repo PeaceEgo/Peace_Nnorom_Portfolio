@@ -34,7 +34,11 @@ export default function ProjectCard({ project }: { project: Project }) {
         </div>
 
         <div className="project__actions">
-          <Button href={project.liveUrl}>View Live Project</Button>
+          {project.liveUrl ? (
+            <Button href={project.liveUrl}>View Live Project</Button>
+          ) : (
+            <span className="project__not-live">Not live yet</span>
+          )}
           <Button variant="soft" icon="arrow-dark" to={`/work/${project.slug}`}>
             View Case Study
           </Button>
