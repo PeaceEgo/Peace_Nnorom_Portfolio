@@ -16,7 +16,7 @@
 
 .skills__grid {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   gap: 25px;
 }
 

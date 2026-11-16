@@ -7,7 +7,7 @@ export default function Work() {
     <div className="paper">
       <section className="work work--page">
         <div className="section-head">
-          <h1 className="h2">Selected Work</h1>
+          <h1 className="h2">Selected Works</h1>
           <p className="lead work__lead">
             A collection of projects I've helped build and ship, turning ideas into reliable applications that solve real-world
             problems.

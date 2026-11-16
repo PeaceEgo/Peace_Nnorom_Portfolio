@@ -7,7 +7,7 @@ export default function SelectedWork() {
   return (
     <section id="work" className="work">
       <div className="section-head">
-        <h2 className="h2">Selected Work</h2>
+        <h2 className="h2">Selected Works</h2>
         <p className="lead work__lead">
           A selection of production-ready applications I've built, showcasing my approach to solving problems, engineering reliable
           systems, and delivering practical digital solutions.

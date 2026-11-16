@@ -19,18 +19,13 @@ export default function About() {
               <h1 className="h1 about-hero__title">ABOUT ME</h1>
               <div className="about-hero__text">
                 <p>
-                  I'm a Full-Stack Developer with over 3 years of professional experience building and shipping web applications
-                  that solve real problems. My work spans frontend interfaces, backend systems, API integrations, and the services
-                  that bring digital products together.
+                I'm a Software Engineer with 3+ years of experience building and shipping web applications that solve practical business problems. My work spans frontend development, backend engineering, API integrations, and the architecture that connects these pieces into functional products.
                 </p>
                 <p>
-                  Over time, I've learned that good software development is about more than writing code. It's about understanding
-                  the problem, considering the people who will use the product, and finding practical ways to turn ideas into
-                  reliable solutions.
+                I've worked on everything from customer-facing applications and financial platforms to internal business tools and management systems. I enjoy taking ideas beyond the interface, understanding how different parts of a product work together, and building solutions that are both useful to their users and practical for the businesses behind them.
                 </p>
                 <p>
-                  My goal is to create software that works well today, remains maintainable as it grows, and delivers meaningful
-                  value to the people and businesses behind it.
+                What drives me is the opportunity to turn complex requirements into simple, purposeful experiences. I care about writing maintainable code, making thoughtful technical decisions, and building software that can evolve as the needs of a product grow.
                 </p>
               </div>
             </div>
@@ -44,16 +39,13 @@ export default function About() {
             <h2 className="h2 about-block__title">More than just writing code.</h2>
             <div className="about-block__text">
               <p>
-                I approach development with curiosity, structure, and a focus on solving the right problems. I believe the best
-                technical solution isn't necessarily the most complicated one, it's the one that meets the need effectively while
-                remaining reliable, maintainable, and practical.
+              I believe good engineering begins long before the first line of code is written. It starts with understanding the problem, asking the right questions, and figuring out what a successful solution should look like.
               </p>
               <p>
-                I value clear communication, thoughtful technical decisions, and collaboration throughout the development process. By
-                understanding both user needs and business objectives, I aim to build applications that are not only functional but
-                also make sense in the real world.
+              I enjoy working across the different layers of a product, connecting user experiences with the systems, data, and integrations that power them. Whether I'm building an interface, developing an API, or improving an existing workflow, I think about how every decision contributes to the bigger picture.
               </p>
-              <p>For me, every project is an opportunity to learn, improve, and deliver something useful.</p>
+              <p>I'm also intentional about how I work. I value clear communication, collaborative problem-solving, clean architecture, and solutions that are practical to build and maintain.</p>
+              <p>For me, the real satisfaction isn't just getting something to work. It's building something that works well, serves its purpose, and gives people a reason to keep using it.</p>
             </div>
           </div>
           <img className="about-block__deco" style={{ left: 1260, top: 423 }} src="/assets/spark-green.svg" alt="" />

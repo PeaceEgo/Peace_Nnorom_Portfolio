@@ -20,8 +20,10 @@
   margin-right: 0;
 }
 
-.socials__link:hover {
-  transform: rotate(-12deg);
+@media (hover: hover) and (pointer: fine) and (min-width: 1024px) {
+  .socials__link:hover {
+    transform: rotate(-12deg);
+  }
 }
 
 .socials__link img {

@@ -35,8 +35,10 @@
   transition: transform 0.15s ease;
 }
 
-.brush-button:hover {
-  transform: translateY(-2px);
+@media (hover: hover) and (pointer: fine) and (min-width: 1024px) {
+  .brush-button:hover {
+    transform: translateY(-2px);
+  }
 }
 
 .brush-button img {

@@ -9,19 +9,21 @@ import "./ContactFooter.css";
 export default function ContactFooter() {
   return (
     <footer className="contact-footer paper">
-      <TornBand image="/assets/torn-contact.png" height={546} bleedY="3.66%" className="contact">
-        <div className="contact__inner">
-          <div className="contact__text">
-            <h2 className="h2 contact__title">Let's Work Together</h2>
-            <p className="lead contact__lead">
-              Whether You Need A Marketing Website, Or Extra Engineering Support. Tell Me What You Are Working On.
-            </p>
+      <div className="contact-wrap">
+        <TornBand image="/assets/torn-contact.png" height={546} bleedY="3.66%" className="contact">
+          <div className="contact__inner">
+            <div className="contact__text">
+              <h2 className="h2 contact__title">Let's Work Together</h2>
+              <p className="lead contact__lead">
+                Whether You Need A Marketing Website, Or Extra Engineering Support. Tell Me What You Are Working On.
+              </p>
+            </div>
+            <Button href={mailto}>Let’s Talk</Button>
           </div>
-          <Button href={mailto}>Let’s Talk</Button>
-        </div>
-      </TornBand>
-      <img className="contact__flower contact__flower--top" src="/assets/flower-flat.svg" alt="" width={60} height={60} />
-      <img className="contact__flower contact__flower--bottom" src="/assets/flower-flat.svg" alt="" width={60} height={60} />
+        </TornBand>
+        <img className="contact__flower contact__flower--top" src="/assets/flower-flat.svg" alt="" width={60} height={60} />
+        <img className="contact__flower contact__flower--bottom" src="/assets/flower-flat.svg" alt="" width={60} height={60} />
+      </div>
 
       <div className="footer">
         <div className="footer__top">
@@ -31,7 +33,7 @@ export default function ContactFooter() {
           </div>
 
           <div className="footer__nav">
-            <p className="footer__nav-title">Navigations</p>
+            {/* <p className="footer__nav-title">Navigations</p> */}
             <nav className="footer__links" aria-label="Footer">
               {navLinks.map((link) => (
                 <Link key={link.label} to={link.to}>

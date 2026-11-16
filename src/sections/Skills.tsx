@@ -19,7 +19,7 @@ const groups: SkillGroup[] = [
     star: "/assets/star-1.svg",
     title: "Front-end",
     description:
-      "Building responsive web and mobile interfaces — intuitive, engaging experiences across browsers and devices.",
+      "Building responsive web and mobile interfaces that deliver intuitive, engaging experiences across browsers and devices.",
     rows: [
       [
         { name: "React", icon: "/assets/icon-react.svg", w: 24, h: 22 },

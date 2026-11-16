@@ -98,6 +98,7 @@
     align-items: stretch;
     gap: 32px;
     padding: 48px var(--page-gutter);
+    overflow: visible;
   }
 
   .approach__lead {
@@ -105,21 +106,27 @@
   }
 
   .approach__steps {
-    gap: 24px;
+    gap: 28px;
+    overflow: visible;
   }
 
   .step {
     position: relative;
     flex-direction: column;
     gap: 0;
+    padding-top: 20px;
+    overflow: visible;
   }
 
+  /* Figma mobile: number splash overlaps the top-left of each card */
   .step .splat {
     position: absolute;
-    right: -18px;
-    top: -30px;
+    left: -14px;
+    right: auto;
+    top: -12px;
     z-index: 1;
-    transform: scale(0.64);
+    transform: scale(0.58);
+    transform-origin: top left;
   }
 
   .step__card {

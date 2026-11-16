@@ -1,4 +1,4 @@
-import { useEffect, useState, type CSSProperties } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import "./Testimonials.css";
 
 const testimonials = [
@@ -54,12 +54,13 @@ const testimonials = [
 
 export default function Testimonials() {
   const [page, setPage] = useState(0);
-  const [pageSize, setPageSize] = useState(3);
+  const [isMobile, setIsMobile] = useState(false);
+  const scrollerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const media = window.matchMedia("(max-width: 1023px)");
     const sync = () => {
-      setPageSize(media.matches ? 1 : 3);
+      setIsMobile(media.matches);
       setPage(0);
     };
     sync();
@@ -67,10 +68,47 @@ export default function Testimonials() {
     return () => media.removeEventListener("change", sync);
   }, []);
 
+  const pageSize = isMobile ? 1 : 3;
   const pageCount = Math.ceil(testimonials.length / pageSize);
   const canPrev = page > 0;
-  const canNext = page < pageCount - 1;
-  const visible = testimonials.slice(page * pageSize, page * pageSize + pageSize);
+  const canNext = page < (isMobile ? testimonials.length - 1 : pageCount - 1);
+  const visible = isMobile ? testimonials : testimonials.slice(page * pageSize, page * pageSize + pageSize);
+
+  const goTo = (index: number) => {
+    const next = Math.max(0, Math.min(index, isMobile ? testimonials.length - 1 : pageCount - 1));
+    setPage(next);
+    if (!isMobile || !scrollerRef.current) return;
+    const root = scrollerRef.current;
+    const card = root.children[next] as HTMLElement | undefined;
+    if (!card) return;
+    const offset = card.getBoundingClientRect().left - root.getBoundingClientRect().left;
+    root.scrollBy({ left: offset - parseFloat(getComputedStyle(root).paddingLeft), behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    if (!isMobile) return;
+    const root = scrollerRef.current;
+    if (!root) return;
+
+    const onScroll = () => {
+      const cards = Array.from(root.children) as HTMLElement[];
+      if (!cards.length) return;
+      const anchor = root.getBoundingClientRect().left + parseFloat(getComputedStyle(root).paddingLeft);
+      let closest = 0;
+      let best = Infinity;
+      cards.forEach((card, i) => {
+        const dist = Math.abs(card.getBoundingClientRect().left - anchor);
+        if (dist < best) {
+          best = dist;
+          closest = i;
+        }
+      });
+      setPage(closest);
+    };
+
+    root.addEventListener("scroll", onScroll, { passive: true });
+    return () => root.removeEventListener("scroll", onScroll);
+  }, [isMobile]);
 
   return (
     <section id="testimonials" className="testimonials paper">
@@ -80,9 +118,13 @@ export default function Testimonials() {
       </div>
 
       <div className="testimonials__body">
-        <div className="testimonials__row" key={`${pageSize}-${page}`}>
+        <div
+          className={`testimonials__row${isMobile ? " testimonials__row--swipe" : ""}`}
+          ref={scrollerRef}
+          key={isMobile ? "mobile" : `desktop-${page}`}
+        >
           {visible.map((t, i) => (
-            <figure key={`${page}-${i}-${t.name}`} className="quote">
+            <figure key={t.name} className="quote">
               <div className="quote__card" style={{ background: t.color }}>
                 <blockquote className="quote__box">
                   <p className="body">{t.quote}</p>
@@ -111,7 +153,7 @@ export default function Testimonials() {
             className="pager__arrow pager__arrow--prev"
             aria-label="Previous testimonials"
             disabled={!canPrev}
-            onClick={() => setPage((p) => Math.max(0, p - 1))}
+            onClick={() => goTo(page - 1)}
           >
             <img src="/assets/arrow-right.svg" alt="" />
           </button>
@@ -121,7 +163,7 @@ export default function Testimonials() {
             className="pager__arrow pager__arrow--next"
             aria-label="Next testimonials"
             disabled={!canNext}
-            onClick={() => setPage((p) => Math.min(pageCount - 1, p + 1))}
+            onClick={() => goTo(page + 1)}
           >
             <img src="/assets/arrow-right.svg" alt="" />
           </button>

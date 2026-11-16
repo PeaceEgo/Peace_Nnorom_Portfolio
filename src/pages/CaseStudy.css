@@ -186,9 +186,11 @@
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.more-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 24px rgba(18, 25, 38, 0.18);
+@media (hover: hover) and (pointer: fine) and (min-width: 1024px) {
+  .more-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(18, 25, 38, 0.18);
+  }
 }
 
 .more-card__squiggle {
@@ -336,7 +338,6 @@
   .case__meta-group:last-child .btn,
   .case__meta-group:last-child .case__not-live {
     width: 100%;
-    border-radius: 12px;
     justify-content: center;
   }
 

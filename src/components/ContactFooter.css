@@ -4,6 +4,10 @@
   gap: 32px;
 }
 
+.contact-wrap {
+  position: relative;
+}
+
 .contact__inner {
   display: flex;
   flex-direction: column;
@@ -32,18 +36,20 @@
 
 .contact__flower {
   position: absolute;
+  z-index: 2;
   width: 60px;
   height: 60px;
+  pointer-events: none;
 }
 
 .contact__flower--top {
-  left: 1228px;
+  right: 100px;
   top: 80px;
 }
 
 .contact__flower--bottom {
   left: 152px;
-  top: 406px;
+  bottom: 100px;
 }
 
 .footer {
@@ -100,8 +106,10 @@
   color: var(--text-700);
 }
 
-.footer__links a:hover {
-  color: var(--primary-500);
+@media (hover: hover) and (pointer: fine) and (min-width: 1024px) {
+  .footer__links a:hover {
+    color: var(--primary-500);
+  }
 }
 
 .footer__rule {
@@ -145,24 +153,23 @@
     width: auto;
   }
 
-  .contact__inner .btn {
-    border-radius: 12px;
-  }
-
   .contact__flower {
-    width: 36px;
-    height: 36px;
+    width: 34px;
+    height: 34px;
   }
 
+  /* Figma mobile: top-right + bottom-left accents */
   .contact__flower--top {
-    left: 20px;
-    top: 90px;
+    left: auto;
+    right: 28px;
+    top: 32px;
   }
 
   .contact__flower--bottom {
-    left: auto;
-    right: 20px;
-    top: 400px;
+    left: 28px;
+    right: auto;
+    top: auto;
+    bottom: 32px;
   }
 
   .footer {

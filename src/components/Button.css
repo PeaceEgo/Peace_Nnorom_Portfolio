@@ -13,14 +13,16 @@
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.btn:hover {
-  transform: translate(-1px, -2px);
-  box-shadow: 2px 4px 0 var(--btn-shadow);
-}
+@media (hover: hover) and (pointer: fine) and (min-width: 1024px) {
+  .btn:hover {
+    transform: translate(-1px, -2px);
+    box-shadow: 2px 4px 0 var(--btn-shadow);
+  }
 
-.btn:active {
-  transform: none;
-  box-shadow: 0 0 0 var(--btn-shadow);
+  .btn:active {
+    transform: none;
+    box-shadow: 0 0 0 var(--btn-shadow);
+  }
 }
 
 .btn--primary {
@@ -38,4 +40,20 @@
 .btn__icon {
   width: 19.167px;
   height: 19.167px;
+}
+
+@media (max-width: 1023px) {
+  .btn {
+    height: 50px;
+    transition: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .btn--primary {
+    border-inline: 1px solid var(--primary-500);
+  }
+
+  .btn--soft {
+    border-inline: 1px solid var(--primary-75);
+  }
 }
