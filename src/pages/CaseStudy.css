@@ -365,41 +365,65 @@
 
   .case__more-list {
     flex-direction: column;
-    gap: 40px;
+    gap: 50px;
+    overflow: visible;
+    padding-top: 28px;
   }
 
+  /* Figma: hug width ~367px, leaving a wider right margin for the crown */
   .more-card {
-    width: 100%;
-    height: 112px;
-    gap: 16px;
-    padding: 0 16px;
+    width: calc(100% - 28px);
+    max-width: 367px;
+    height: auto;
+    gap: 22px;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: visible;
   }
 
   .more-card__squiggle {
-    right: -8px;
-    width: 40px;
+    right: -24px;
+    top: -25px;
+    width: 45px;
+    height: auto;
+    pointer-events: none;
+    z-index: 1;
   }
 
   .more-card__device {
     width: 112px;
   }
 
+  /* Figma: title row on top (arrow aligned to it), scribble + type row below */
+  .more-card__text {
+    flex: 1 1 0;
+    min-width: 0;
+    gap: 8px;
+  }
+
   .more-card__name {
-    font-size: 20px;
-    line-height: 30px;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 25px;
+    white-space: nowrap;
   }
 
   .more-card__type {
-    gap: 12px;
+    gap: 14px;
     font-size: 14px;
+    line-height: 22px;
+    white-space: nowrap;
   }
 
   .more-card__type img {
     width: 40px;
+    min-width: 24px;
+    flex-shrink: 1;
   }
 
   .more-card__arrow {
-    right: 16px;
-    width: 28px;
+    right: 20px;
+    top: 22px;
+    width: 30px;
   }
 }

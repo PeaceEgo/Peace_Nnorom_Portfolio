@@ -118,15 +118,15 @@
     overflow: visible;
   }
 
-  /* Figma mobile: number splash overlaps the top-left of each card */
+  /* Number splash overlaps the top-right of each card */
   .step .splat {
     position: absolute;
-    left: -14px;
-    right: auto;
+    left: auto;
+    right: -14px;
     top: -12px;
     z-index: 1;
     transform: scale(0.58);
-    transform-origin: top left;
+    transform-origin: top right;
   }
 
   .step__card {
