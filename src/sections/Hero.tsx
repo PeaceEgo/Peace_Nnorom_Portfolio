@@ -17,8 +17,8 @@ export default function Hero() {
         </div>
         <div className="hero__actions">
           <Button to="/#work">View My Work</Button>
-          <Button variant="soft" icon="download" href="/Peace_Nnorom_Resume.pdf" download>
-            Download Resume
+          <Button variant="soft" href="/Peace_Nnorom_Fullstack_Engineer_CV.pdf">
+            View Resume
           </Button>
         </div>
       </div>

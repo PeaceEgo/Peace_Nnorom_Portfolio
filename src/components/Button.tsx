@@ -36,14 +36,15 @@ export default function Button({ children, variant = "primary", icon = "arrow", 
   }
 
   const external = href?.startsWith("http");
+  const openInNewTab = external || href?.endsWith(".pdf");
 
   return (
     <a
       className={classes}
       href={href ?? "#"}
       download={download}
-      target={external ? "_blank" : undefined}
-      rel={external ? "noreferrer" : undefined}
+      target={openInNewTab ? "_blank" : undefined}
+      rel={openInNewTab ? "noreferrer" : undefined}
     >
       {content}
     </a>
